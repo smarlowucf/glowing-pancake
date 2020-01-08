@@ -18,8 +18,12 @@ def add_pancake():
     try:
         utils.add_pancake_type(data)
     except Exception as error:
-        msg = 'Unable to add pancake: {0}'.format(error)
-        return make_response(jsonify({'msg': msg}), 400)
+        return make_response(
+            jsonify(
+                {'msg': 'Unable to add pancake: {0}'.format(error)}
+            ), 
+            400
+        )
 
     return make_response(jsonify({'msg': 'Pancake added'}), 201)
 
@@ -29,8 +33,12 @@ def get_pancakes():
     try:
         types = utils.get_pancake_types()
     except Exception as error:
-        msg = 'Unable to retrieve pancake types: {0}'.format(error)
-        return make_response(jsonify({'msg': msg}), 400)
+        return make_response(
+            jsonify(
+                {'msg': 'Unable to retrieve pancake types: {0}'.format(error)}
+            ),
+            400
+        )
 
     return make_response(jsonify(types), 200)
 
@@ -40,8 +48,12 @@ def get_pancake(name):
     try:
         pancake = utils.get_pancake(name)
     except Exception as error:
-        msg = 'Unable to retrieve pancake: {0}'.format(error)
-        return make_response(jsonify({'msg': msg}), 400)
+        return make_response(
+            jsonify(
+                {'msg': 'Unable to retrieve pancake type: {0}'.format(error)}
+            ), 
+            400
+        )
 
     return make_response(jsonify(pancake), 200)
 
@@ -51,7 +63,11 @@ def delete_pancake(name):
     try:
         utils.delete_pancake_type(name)
     except Exception as error:
-        msg = 'Unable to delete pancake: {0}'.format(error)
-        return make_response(jsonify({'msg': msg}), 400)
+        return make_response(
+            jsonify(
+                {'msg': 'Unable to delete pancake: {0}'.format(error)}
+            ),
+            400
+        )
 
     return make_response(jsonify({'msg': 'Pancake deleted'}), 200)

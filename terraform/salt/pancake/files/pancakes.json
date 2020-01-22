@@ -1,0 +1,29 @@
+{
+  "banana": {
+    "ingredients": [
+      "flour",
+      "sugar",
+      "salt",
+      "baking powder",
+      "banana",
+      "walnuts"
+    ]
+  },
+  "plain": {
+    "ingredients": [
+      "flour",
+      "sugar",
+      "salt",
+      "baking powder"
+    ]
+  },
+  "glowing": {
+    "ingredients": [
+      "flour",
+      "sugar",
+      "salt",
+      "baking powder",
+      "glow goo"
+    ]
+  }
+}

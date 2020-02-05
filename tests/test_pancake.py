@@ -10,6 +10,7 @@ def test_pancake_user(host):
 
 @pytest.mark.parametrize('name', [
     ('apache2'),
+    ('python3'),
     ('python3-Flask'),
     ('apache2-mod_wsgi-python3'),
     ('git')
